@@ -21,7 +21,7 @@
 
 ## Sources
 
-- [SBO: Starting a Grails 3 Project](https://www.safaribooksonline.com/learning-paths/learning-path-starting/9781491983904/)
+- [SBO Tutorial: Starting a Grails 3 Project](https://www.safaribooksonline.com/learning-paths/learning-path-starting/9781491983904/)
 - [Grails Forge](http://start.grails.org/)
 
 
