@@ -3,6 +3,11 @@ package grails.hello
 class WelcomeController {
 
     def index() {
-        render "Hello, World! Grails is here."  /*double quotes used for interpolated strings */
+        String n = params.name ?: 'World'
+    }
+
+    def greet(String name) {
+        String n = name ?: 'World'
+        render "Hello, ${n}!"  //double quotes used for interpolated strings
     }
 }

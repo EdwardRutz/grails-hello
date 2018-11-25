@@ -5,14 +5,11 @@ import spock.lang.Specification
 
 class WelcomeControllerSpec extends Specification implements ControllerUnitTest<WelcomeController> {
 
-    def setup() {
-    }
+    void "greet without a name should say Hello, World!"() {
+        when:
+        controller.greet()
 
-    def cleanup() {
-    }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
+        then:
+        response.text == 'Hello, World!'
     }
 }
