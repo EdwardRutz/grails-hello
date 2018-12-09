@@ -4,6 +4,7 @@
 ## Tech & Dependencies
 
 - Grails 3.3.8
+- Testing: Spock
 
 
 ## Install & Run
