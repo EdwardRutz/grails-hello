@@ -2,6 +2,8 @@ package grails.hello
 
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
+import grails.test.mixin.TestFor
+
 
 class WelcomeControllerSpec extends Specification implements ControllerUnitTest<WelcomeController> {
 
@@ -44,5 +46,22 @@ class WelcomeControllerSpec extends Specification implements ControllerUnitTest<
 
         then:
         respone.redirectedUrl == "/welcome/greet?name=$name"
+    }
+
+    void 'hi without a name returns a map of user to World'() {
+        when:
+        def model = controler.hi()
+
+        then:
+        model.user == 'World'
+    }
+
+    void 'hi a name returns a map of user to name'() {
+        when:
+        params.name = 'Dolly'
+        def model = controler.hi()
+
+        then:
+        model.user == 'Dolly'
     }
 }

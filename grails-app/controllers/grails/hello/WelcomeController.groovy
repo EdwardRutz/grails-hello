@@ -14,6 +14,6 @@ class WelcomeController {
 
     def hi() {
         String n = params.name ?: 'World'
-        return [user: n]
+        [user: n]
     }
 }

@@ -9,6 +9,12 @@
 
 ## Install & Run
 
+- Clone
+- Run tests from grails console, 
+```grails
+    test-app
+    open test-report
+```
 
 
 ## Notes
