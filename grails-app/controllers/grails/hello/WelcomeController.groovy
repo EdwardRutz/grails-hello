@@ -12,5 +12,8 @@ class WelcomeController {
         render "Hello, ${n}!"  //double quotes used for interpolated strings
     }
 
-
+    def hi() {
+        String n = params.name ?: 'World'
+        return [user: n]
+    }
 }

@@ -39,9 +39,10 @@ class WelcomeControllerSpec extends Specification implements ControllerUnitTest<
         String name = 'Dolly'
 
         when:
-        controller.greet(name)
+        params.name = name
+        controller.index()
 
         then:
-        respone.text == 'Hello, ${name}!'
+        respone.redirectedUrl == "/welcome/greet?name=$name"
     }
 }
